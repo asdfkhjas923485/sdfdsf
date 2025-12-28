@@ -853,21 +853,7 @@
         --token-579c6299-52c3-4e24-80ef-241897e363ea: #fff3;
         --token-c77e9e0c-4f58-4439-a330-e4ebf4e1aaf3: #e0fbfc;
       }
-      @supports (z-index: calc(infinity)) {
-        #__framer-badge-container {
-          --infinity: infinity;
-        }
-      }
-      #__framer-badge-container {
-        pointer-events: none;
-        width: 100%;
-        z-index: calc(var(--infinity, 2147480000));
-        justify-content: flex-end;
-        padding: 20px;
-        display: flex;
-        position: fixed;
-        bottom: 0;
-      }
+
       @supports (background: -webkit-named-image(i)) and
         (not (grid-template-rows: subgrid)) {
         body {
