@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <!-- Made in Framer · framer.com ✨ -->
-<!-- Published Dec 28, 2025, 8:10 PM UTC -->
+<!-- Published Dec 28, 2025, 8:08 PM UTC -->
 <html lang="en" data-redirect-timezone="1">
   <head>
-    <link rel="icon" href="favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta charset="utf-8" />
 
     <script>
@@ -20,55 +17,6 @@
     </script>
     <!-- Start of headStart -->
 
-    <!-- Snippet: h3oY6l_Dt -->
-    <script>
-      (function () {
-        const TITLE = "Al | Data Scientist & Product Builder";
-
-        function ensureMeta(selector, attrs) {
-          let el = document.querySelector(selector);
-          if (!el) {
-            el = document.createElement("meta");
-            for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v);
-            document.head.appendChild(el);
-          }
-          return el;
-        }
-
-        function apply() {
-          if (document.title !== TITLE) document.title = TITLE;
-
-          const og = ensureMeta('meta[property="og:title"]', {
-            property: "og:title",
-          });
-          if (og.getAttribute("content") !== TITLE)
-            og.setAttribute("content", TITLE);
-
-          const tw = ensureMeta('meta[name="twitter:title"]', {
-            name: "twitter:title",
-          });
-          if (tw.getAttribute("content") !== TITLE)
-            tw.setAttribute("content", TITLE);
-        }
-
-        apply();
-
-        // handle SPA navigation (Framer often changes pages without full reload)
-        const _push = history.pushState;
-        history.pushState = function () {
-          _push.apply(this, arguments);
-          apply();
-        };
-        window.addEventListener("popstate", apply);
-
-        // if Framer rewrites <head>, re-apply once it mutates
-        new MutationObserver(apply).observe(document.head, {
-          childList: true,
-          subtree: true,
-        });
-      })();
-    </script>
-    <!-- SnippetEnd: h3oY6l_Dt -->
     <!-- End of headStart -->
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content="Framer 8e1ebfe" />
@@ -79,11 +27,11 @@
     />
     <meta
       name="framer-search-index"
-      content="https://framerusercontent.com/sites/1rmZ5YCj7u4vqT6UUq26Iy/searchIndex-idQNJ2qiXaRO.json"
+      content="https://framerusercontent.com/sites/1rmZ5YCj7u4vqT6UUq26Iy/searchIndex-ZiTNP6jxwAOh.json"
     />
     <meta
       name="framer-search-index-fallback"
-      content="https://framerusercontent.com/sites/1rmZ5YCj7u4vqT6UUq26Iy/searchIndex-ZiTNP6jxwAOh.json"
+      content="https://framerusercontent.com/sites/1rmZ5YCj7u4vqT6UUq26Iy/searchIndex-NRmGYi8Djw1U.json"
     />
     <link
       href="https://framerusercontent.com/images/sfITgZjfc8Z41kEWwgKYropNFB8.png"
@@ -856,7 +804,21 @@
         --token-579c6299-52c3-4e24-80ef-241897e363ea: #fff3;
         --token-c77e9e0c-4f58-4439-a330-e4ebf4e1aaf3: #e0fbfc;
       }
-
+      @supports (z-index: calc(infinity)) {
+        #__framer-badge-container {
+          --infinity: infinity;
+        }
+      }
+      #__framer-badge-container {
+        pointer-events: none;
+        width: 100%;
+        z-index: calc(var(--infinity, 2147480000));
+        justify-content: flex-end;
+        padding: 20px;
+        display: flex;
+        position: fixed;
+        bottom: 0;
+      }
       @supports (background: -webkit-named-image(i)) and
         (not (grid-template-rows: subgrid)) {
         body {
@@ -10394,13 +10356,70 @@
     ></script>
     <!-- Start of bodyStart -->
 
-    <!-- End of bodyStart -->
+    <!-- Snippet: h3oY6l_Dt -->
+    <script>
+      (function () {
+        const TITLE = "Al | Data Scientist & Product Builder";
+
+        function setMeta(selector, attr, value) {
+          let el = document.querySelector(selector);
+          if (!el) {
+            el = document.createElement("meta");
+            if (attr === "property")
+              el.setAttribute(
+                "property",
+                selector.match(/property="([^"]+)"/)?.[1] || ""
+              );
+            document.head.appendChild(el);
+          }
+          el.setAttribute(attr, value);
+        }
+
+        function apply() {
+          document.title = TITLE;
+
+          // OG / Twitter titles (buat preview share)
+          let og = document.querySelector('meta[property="og:title"]');
+          if (!og) {
+            og = document.createElement("meta");
+            og.setAttribute("property", "og:title");
+            document.head.appendChild(og);
+          }
+          og.setAttribute("content", TITLE);
+
+          let tw = document.querySelector('meta[name="twitter:title"]');
+          if (!tw) {
+            tw = document.createElement("meta");
+            tw.setAttribute("name", "twitter:title");
+            document.head.appendChild(tw);
+          }
+          tw.setAttribute("content", TITLE);
+        }
+
+        apply();
+
+        // kalau Framer ganti page tanpa reload
+        const _push = history.pushState;
+        history.pushState = function () {
+          _push.apply(this, arguments);
+          apply();
+        };
+        window.addEventListener("popstate", apply);
+
+        // jaga-jaga kalau Framer rewrite title lagi
+        new MutationObserver(apply).observe(document.head, {
+          childList: true,
+          subtree: true,
+        });
+      })();
+    </script>
+    <!-- SnippetEnd: h3oY6l_Dt --><!-- End of bodyStart -->
 
     <div
       id="main"
       data-framer-hydrate-v2='{"routeId":"augiA20Il","localeId":"default","breakpoints":[{"hash":"72rtr7","mediaQuery":"(min-width: 1200px)"},{"hash":"se0oeu","mediaQuery":"(min-width: 810px) and (max-width: 1199.98px)"},{"hash":"113axgv","mediaQuery":"(max-width: 809.98px)"},{"hash":"l9ev9j","mediaQuery":"(min-width: 1200px)"},{"hash":"17o875r","mediaQuery":"(min-width: 810px) and (max-width: 1199.98px)"},{"hash":"3q3s5s","mediaQuery":"(max-width: 809.98px)"}]}'
       data-framer-ssr-released-at="2025-12-22T18:13:49.970Z"
-      data-framer-page-optimized-at="2025-12-28T20:10:49.457Z"
+      data-framer-page-optimized-at="2025-12-28T20:08:54.783Z"
       data-framer-generated-page
     >
       <!--$--><style data-framer-html-style>
@@ -61402,7 +61421,35 @@
       })();
     </script>
 
-
+    <div id="__framer-badge-container">
+      <!--$--><!--$--><!--$--><a
+        class="framer-6jWyo framer-n0ccwk framer-v-n0ccwk framer-bmpgw8 __framer-badge"
+        data-framer-appear-id="n0ccwk"
+        data-framer-name="Light"
+        data-nosnippet="true"
+        style="
+          will-change: transform;
+          pointer-events: auto;
+          opacity: 0.001;
+          transform: translateY(10px);
+        "
+        href="https://www.framer.com"
+        rel="noopener"
+        title="Create a free website with Framer, the website builder loved by startups, designers and agencies."
+        ><div
+          class="framer-13yxzio"
+          data-framer-name="Backdrop"
+          style="
+            background-color: rgb(255, 255, 255);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            box-shadow: 0px 0.6021873017743928px 1.5656869846134214px -1.5px rgba(0, 0, 0, 0.17),
+              0px 2.288533303243457px 5.950186588432988px -3px rgba(0, 0, 0, 0.14),
+              0px 10px 26px -4.5px rgba(0, 0, 0, 0.02);
+          "
+        ></div>
         <div
           class="framer-19yaanm"
           data-framer-name="Content"
@@ -62518,14 +62565,14 @@
     /><link
       rel="modulepreload"
       fetchpriority="low"
-      href="https://framerusercontent.com/sites/1rmZ5YCj7u4vqT6UUq26Iy/script_main.B15iiq09.mjs"
+      href="https://framerusercontent.com/sites/1rmZ5YCj7u4vqT6UUq26Iy/script_main.Cdg2D3yV.mjs"
     />
     <script
       type="module"
       async
       data-framer-bundle="main"
       fetchpriority="low"
-      src="https://framerusercontent.com/sites/1rmZ5YCj7u4vqT6UUq26Iy/script_main.B15iiq09.mjs"
+      src="https://framerusercontent.com/sites/1rmZ5YCj7u4vqT6UUq26Iy/script_main.Cdg2D3yV.mjs"
     ></script>
     <script type="framer/handover" id="__framer__handoverData">
       [{"0":1,"1":94},["Map",2,3,17,18,30,31,41,42,54,55],"{\"from\":\"6d07470f-43de-46c0-8c30-098d99bf7c4a\",\"limit\":{\"type\":\"LiteralValue\",\"value\":1},\"offset\":{\"type\":\"LiteralValue\",\"value\":0},\"select\":[{\"collection\":\"Xrw3f6fB3\",\"name\":\"rmrmyNjN8\",\"type\":\"Identifier\"},{\"collection\":\"Xrw3f6fB3\",\"name\":\"EdO3R1D5d\",\"type\":\"Identifier\"},{\"collection\":\"Xrw3f6fB3\",\"name\":\"id\",\"type\":\"Identifier\"}]}default",[4],{"rmrmyNjN8":5,"EdO3R1D5d":8,"id":15},{"type":6,"value":7},"string","attribution-truth-atlas",{"type":9,"value":10},"responsiveimage",{"src":11,"srcSet":12,"pixelWidth":13,"pixelHeight":14},"https://framerusercontent.com/images/mOyYuwlV77YbUcJ8DI60un5s.png?width=2460&height=1383","https://framerusercontent.com/images/mOyYuwlV77YbUcJ8DI60un5s.png?scale-down-to=512&width=2460&height=1383 512w,https://framerusercontent.com/images/mOyYuwlV77YbUcJ8DI60un5s.png?scale-down-to=1024&width=2460&height=1383 1024w,https://framerusercontent.com/images/mOyYuwlV77YbUcJ8DI60un5s.png?scale-down-to=2048&width=2460&height=1383 2048w,https://framerusercontent.com/images/mOyYuwlV77YbUcJ8DI60un5s.png?width=2460&height=1383 2460w",2460,1383,{"type":6,"value":16},"n1FJSRKOw","{\"from\":\"6d07470f-43de-46c0-8c30-098d99bf7c4a\",\"limit\":{\"type\":\"LiteralValue\",\"value\":1},\"offset\":{\"type\":\"LiteralValue\",\"value\":1},\"select\":[{\"collection\":\"pIjmmXRMO\",\"name\":\"rmrmyNjN8\",\"type\":\"Identifier\"},{\"collection\":\"pIjmmXRMO\",\"name\":\"EdO3R1D5d\",\"type\":\"Identifier\"},{\"collection\":\"pIjmmXRMO\",\"name\":\"id\",\"type\":\"Identifier\"}]}default",[19],{"rmrmyNjN8":20,"EdO3R1D5d":22,"id":28},{"type":6,"value":21},"data-contract-shield",{"type":9,"value":23},{"src":24,"srcSet":25,"pixelWidth":26,"pixelHeight":27},"https://framerusercontent.com/images/435Y2jB1eodSavSi2qAUY33Pp8.png?width=1914&height=1077","https://framerusercontent.com/images/435Y2jB1eodSavSi2qAUY33Pp8.png?scale-down-to=512&width=1914&height=1077 512w,https://framerusercontent.com/images/435Y2jB1eodSavSi2qAUY33Pp8.png?scale-down-to=1024&width=1914&height=1077 1024w,https://framerusercontent.com/images/435Y2jB1eodSavSi2qAUY33Pp8.png?width=1914&height=1077 1914w",1914,1077,{"type":6,"value":29},"AHZsAiH_O","{\"from\":\"6d07470f-43de-46c0-8c30-098d99bf7c4a\",\"limit\":{\"type\":\"LiteralValue\",\"value\":1},\"offset\":{\"type\":\"LiteralValue\",\"value\":2},\"select\":[{\"collection\":\"XBe2feCL3\",\"name\":\"rmrmyNjN8\",\"type\":\"Identifier\"},{\"collection\":\"XBe2feCL3\",\"name\":\"EdO3R1D5d\",\"type\":\"Identifier\"},{\"collection\":\"XBe2feCL3\",\"name\":\"id\",\"type\":\"Identifier\"}]}default",[32],{"rmrmyNjN8":33,"EdO3R1D5d":35,"id":39},{"type":6,"value":34},"anomaly-radar",{"type":9,"value":36},{"src":37,"srcSet":38,"pixelWidth":13,"pixelHeight":14},"https://framerusercontent.com/images/f6phQiI0HaftBpNhhTdpXoNDAs.png?width=2460&height=1383","https://framerusercontent.com/images/f6phQiI0HaftBpNhhTdpXoNDAs.png?scale-down-to=512&width=2460&height=1383 512w,https://framerusercontent.com/images/f6phQiI0HaftBpNhhTdpXoNDAs.png?scale-down-to=1024&width=2460&height=1383 1024w,https://framerusercontent.com/images/f6phQiI0HaftBpNhhTdpXoNDAs.png?scale-down-to=2048&width=2460&height=1383 2048w,https://framerusercontent.com/images/f6phQiI0HaftBpNhhTdpXoNDAs.png?width=2460&height=1383 2460w",{"type":6,"value":40},"zNFcPrCAH","{\"from\":\"6d07470f-43de-46c0-8c30-098d99bf7c4a\",\"limit\":{\"type\":\"LiteralValue\",\"value\":1},\"offset\":{\"type\":\"LiteralValue\",\"value\":3},\"select\":[{\"collection\":\"iRXtaTkOa\",\"name\":\"rmrmyNjN8\",\"type\":\"Identifier\"},{\"collection\":\"iRXtaTkOa\",\"name\":\"EdO3R1D5d\",\"type\":\"Identifier\"},{\"collection\":\"iRXtaTkOa\",\"name\":\"id\",\"type\":\"Identifier\"}]}default",[43],{"rmrmyNjN8":44,"EdO3R1D5d":46,"id":52},{"type":6,"value":45},"metric-truth-kit",{"type":9,"value":47},{"src":48,"srcSet":49,"pixelWidth":50,"pixelHeight":51},"https://framerusercontent.com/images/ywORs8BwGt1Y9RYFwsWxUiask.png?width=648&height=364","https://framerusercontent.com/images/ywORs8BwGt1Y9RYFwsWxUiask.png?scale-down-to=512&width=648&height=364 512w,https://framerusercontent.com/images/ywORs8BwGt1Y9RYFwsWxUiask.png?width=648&height=364 648w",648,364,{"type":6,"value":53},"WlniS_J40","{\"from\":\"a6af0587-ca1d-4fc3-8bef-2da3b220ee3d\",\"limit\":{\"type\":\"LiteralValue\",\"value\":3},\"select\":[{\"collection\":\"hPMgXYR9T\",\"name\":\"DMPQcS2TJ\",\"type\":\"Identifier\"},{\"collection\":\"hPMgXYR9T\",\"name\":\"NsS5iM7su\",\"type\":\"Identifier\"},{\"collection\":\"hPMgXYR9T\",\"name\":\"cYK4x7iQd\",\"type\":\"Identifier\"},{\"collection\":\"hPMgXYR9T\",\"name\":\"id\",\"type\":\"Identifier\"}]}default",[56,69,82],{"DMPQcS2TJ":57,"NsS5iM7su":63,"cYK4x7iQd":65,"id":67},{"type":9,"value":58},{"src":59,"srcSet":60,"pixelWidth":61,"pixelHeight":62},"https://framerusercontent.com/images/sGzSGlGg8hniBw9daEiqfj9R9Zw.jpg?width=4096&height=2726","https://framerusercontent.com/images/sGzSGlGg8hniBw9daEiqfj9R9Zw.jpg?scale-down-to=512&width=4096&height=2726 512w,https://framerusercontent.com/images/sGzSGlGg8hniBw9daEiqfj9R9Zw.jpg?scale-down-to=1024&width=4096&height=2726 1024w,https://framerusercontent.com/images/sGzSGlGg8hniBw9daEiqfj9R9Zw.jpg?scale-down-to=2048&width=4096&height=2726 2048w,https://framerusercontent.com/images/sGzSGlGg8hniBw9daEiqfj9R9Zw.jpg?width=4096&height=2726 4096w",4096,2726,{"type":6,"value":64},"Your Model Isn’t the Problem. Your Measurement Is.",{"type":6,"value":66},"your-model-isn’t-the-problem.-your-measurement-is.",{"type":6,"value":68},"mCMYHEK8n",{"DMPQcS2TJ":70,"NsS5iM7su":76,"cYK4x7iQd":78,"id":80},{"type":9,"value":71},{"src":72,"srcSet":73,"pixelWidth":74,"pixelHeight":75},"https://framerusercontent.com/images/z4zVBC0Ur7BHEzF4j2aj2K6zdk.jpg?width=3872&height=2592","https://framerusercontent.com/images/z4zVBC0Ur7BHEzF4j2aj2K6zdk.jpg?scale-down-to=512&width=3872&height=2592 512w,https://framerusercontent.com/images/z4zVBC0Ur7BHEzF4j2aj2K6zdk.jpg?scale-down-to=1024&width=3872&height=2592 1024w,https://framerusercontent.com/images/z4zVBC0Ur7BHEzF4j2aj2K6zdk.jpg?scale-down-to=2048&width=3872&height=2592 2048w,https://framerusercontent.com/images/z4zVBC0Ur7BHEzF4j2aj2K6zdk.jpg?width=3872&height=2592 3872w",3872,2592,{"type":6,"value":77},"How to Write a KPI Doc That Stops Metric Debates",{"type":6,"value":79},"how-to-write-a-kpi-doc-that-stops-metric-debates",{"type":6,"value":81},"larplz6YE",{"DMPQcS2TJ":83,"NsS5iM7su":88,"cYK4x7iQd":90,"id":92},{"type":9,"value":84},{"src":85,"srcSet":86,"pixelWidth":61,"pixelHeight":87},"https://framerusercontent.com/images/NpQN8DY1JlgXXlrE2sdNuiGAZE.jpg?width=4096&height=3112","https://framerusercontent.com/images/NpQN8DY1JlgXXlrE2sdNuiGAZE.jpg?scale-down-to=512&width=4096&height=3112 512w,https://framerusercontent.com/images/NpQN8DY1JlgXXlrE2sdNuiGAZE.jpg?scale-down-to=1024&width=4096&height=3112 1024w,https://framerusercontent.com/images/NpQN8DY1JlgXXlrE2sdNuiGAZE.jpg?scale-down-to=2048&width=4096&height=3112 2048w,https://framerusercontent.com/images/NpQN8DY1JlgXXlrE2sdNuiGAZE.jpg?width=4096&height=3112 4096w",3112,{"type":6,"value":89},"GA4 Shows X. Your DB Shows Y. Here’s How to Stop Guessing.",{"type":6,"value":91},"ga4-shows-x.-your-db-shows-y.-here’s-how-to-stop-guessing.",{"type":6,"value":93},"mfAZIqO3Z",["Map"]]
